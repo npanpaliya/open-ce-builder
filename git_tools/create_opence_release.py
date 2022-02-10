@@ -81,7 +81,6 @@ def _main(arg_strings=None): # pylint: disable=too-many-locals, too-many-stateme
         print("env_path: ", env_path)
         open_ce_env_file = os.path.abspath(env_path)
         print("Env file path: ", open_ce_env_file)
-        continue
         if not _has_git_tag_changed(primary_repo_path, args.branch, open_ce_env_file):
             print("--->The opence-env git_tag has not changed.")
             print("--->No release is needed.")
