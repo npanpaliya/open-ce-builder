@@ -77,8 +77,11 @@ def _main(arg_strings=None): # pylint: disable=too-many-locals, too-many-stateme
     for env_file in env_files:
         print("Primary_repo_path: ", primary_repo_path)
         print("env file: ", env_file)
-        open_ce_env_file = os.path.abspath(os.path.join(primary_repo_path, "envs", env_file))
+        env_path = os.path.join(primary_repo_path, "envs", env_file)
+        print("env_path: ", env_path)
+        open_ce_env_file = os.path.abspath(env_path)
         print("Env file path: ", open_ce_env_file)
+        continue
         if not _has_git_tag_changed(primary_repo_path, args.branch, open_ce_env_file):
             print("--->The opence-env git_tag has not changed.")
             print("--->No release is needed.")
