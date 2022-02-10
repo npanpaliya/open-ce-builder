@@ -76,6 +76,7 @@ def _main(arg_strings=None): # pylint: disable=too-many-locals, too-many-stateme
     env_files = ["opence-env.yaml", "tensorflow-serving-env.yaml"]
     for env_file in env_files:
         open_ce_env_file = os.path.abspath(os.path.join(primary_repo_path, "envs", env_file))
+        print("Env file path: ", open_ce_env_file)
         if not _has_git_tag_changed(primary_repo_path, args.branch, open_ce_env_file):
             print("--->The opence-env git_tag has not changed.")
             print("--->No release is needed.")
