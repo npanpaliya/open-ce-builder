@@ -73,7 +73,7 @@ def _main(arg_strings=None): # pylint: disable=too-many-locals, too-many-stateme
         config_file = os.path.abspath(args.conda_build_configs)
 
     primary_repo_path = "./"
-    env_files = ["opence-env.yaml", "tensorflow-serving-env.yaml"]
+    env_files = ["tensorflow-serving-env.yaml", "opence-env.yaml"]
     for env_file in env_files:
         print("Primary_repo_path: ", primary_repo_path)
         print("env file: ", env_file)
